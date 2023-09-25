@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 5px; */
+  /* width:40px; */
+}</style>
+
+
+</head>
+
+
+  <body>
+  <form action="https://www.ethnus.com" onsubmit="return validate()" class="form m-3">
+    <center>
+      <table>
+        <tr>
+          <td class="text-center"><h2><em>INSTAGRAM</em></h2></td>
+        </tr>
+        <tr>
+          <td><img src="https://i.stack.imgur.com/YQu5k.png" height="25px" width="20px" style="margin-right:-4px;">
+          
+<input id="us" type="text" placeholder="Username" class="form-control ms-4">
+          </td></tr>
+          <tr><td>
+            <input id="pwd" type="password" placeholder="Password" class="form-control ms-4">
+          </td>
+        </tr>
+        <tr>
+          <td  class="text-center "><button type="submit" class="btn btn-primary">Log in</button></td>
+        </tr>
+        <td id="invalid-msg"></td></tr>
+        <tr class="footer">
+         <td><input type="checkbox">Remember me <a style="color:blue;margin-left: 10%;" href="">Forgot Password?</a> </td> 
+          <!-- <td  class="text-center "><button type="submit" class="btn btn-primary">remember me</button></td> -->
+       
+       
+         
+      </table>
+      <p>Dont have account? <span style="color:blue">sign up here</span></p>
+      </center>
+
+
+      <script>
+        function validate(){
+        var l1=document.getElementById("us").value;
+        var l2=document.getElementById("pwd").value;
+        if(l1.length<5 || l2.length<5 ){
+          document.getElementById("invalid-msg").innerHTML=`<p class="alert alert-danger">Invalid User name or password</p>`;
+          return false;
+
+        }
+        return true;}
+      </script>
+</body>
+</html>
+
+
+
+
+
+

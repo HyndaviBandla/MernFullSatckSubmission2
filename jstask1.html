@@ -1,0 +1,36 @@
+<!-- Sample Data and output:
+Example x = 32243;
+Expected Output : 34223 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h></h>
+  </body>
+  <script>
+    function reverse(n) {
+      let result = 0;
+      let number = n;
+      while (number > 0) {
+        // Getting the rightmost digit
+        rightmost = number % 10;
+
+        result = result * 10 + rightmost;
+
+        // Removing the rightmost digit from the number
+        number = Math.floor(number / 10);
+      }
+
+      return result;
+    }
+    let n = reverse(12345);
+    console.log(n);
+    document.querySelector("h").innerHTML = n;
+  </script>
+</html>

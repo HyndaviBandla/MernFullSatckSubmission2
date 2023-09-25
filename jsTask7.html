@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        animation: mymove 2s infinite;
+        animation-play-state: paused;
+      }
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 900px;
+        }
+      }
+      h1 {
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv"><img src="train.png" alt="train" /></div>
+    <!-- <img src="train.png" alt="train" id="myDiv" /> -->
+    <center>
+      <h1>Click on the following buttons to handle the animation</h1>
+      <button type="button" onclick="play()">start</button>
+      <button type="button" onclick="pause()">stop</button>
+    </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      function play() {
+        // $("myDiv").css("animationPlayState","running");
+        document.getElementById("myDiv").style.animationPlayState = "running";
+      }
+      function pause() {
+        // $("myDiv").css("animationPlayState","running");
+        document.getElementById("myDiv").style.animationPlayState = "paused";
+      }
+    </script>
+  </body>
+</html>

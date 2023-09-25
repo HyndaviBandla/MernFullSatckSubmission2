@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        padding-right: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <!-- <center> -->
+      <table>
+        <tr>
+          <td><label>1st Number:</label></td>
+          <td><input type="text" id="n1" /></td>
+        </tr>
+        <br />
+        <tr>
+          <td><label>2nd Number:</label></td>
+          <td><input type="text" id="n2" /></td>
+        </tr>
+      </table>
+      <button type="button" id="mul" onclick="multiply() ,btnColor1() ">
+        Multiply
+      </button>
+      <button type="button" id="div" onclick="divide(),btnColor2()">
+        Divide</button
+      ><br />
+      <p>The Result is:</p>
+      <h>hi</h>
+      <!-- </center> -->
+    </form>
+    <script>
+      function btnColor1() {
+        document.getElementById("mul").style.borderColor = "blue";
+      }
+      function btnColor2() {
+        document.getElementById("div").style.borderColor = "blue";
+      }
+      function divide() {
+        // document.getElementById("div").style.borderColor = "blue";
+        let d1 = document.getElementById("n1").value;
+        let d2 = document.getElementById("n2").value;
+        document.querySelector("h").innerHTML = d1 / d2;
+      }
+      function multiply() {
+        let d1 = document.getElementById("n1").value;
+        let d2 = document.getElementById("n2").value;
+        console.log(d1);
+        document.querySelector("h").innerHTML = d1 * d2;
+      }
+    </script>
+  </body>
+</html>

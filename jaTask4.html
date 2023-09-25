@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button"   onclick="myDate()"
+    >show date</button
+    ><br />
+    <h id="demo1"></h><br />
+    <button type="button"   onclick="time()"
+    >show time</button></body><br>
+    <h id="demo2"></h><br />
+
+
+
+
+    <script>
+    
+
+      function myDate(){
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+      const d=new Date();
+      document.getElementById("demo1").innerHTML=d.getDate()+"/"+monthNames[d.getMonth()]+"/"+d.getFullYear();
+    // console.log(d.getDate()+"/"+monthNames[d.getMonth()]+"/"+d.getFullYear())
+  }
+
+function time(){
+  // var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+var d = new Date();
+// var dayName = days[d.getDay()];
+// const monthNames = ["January", "February", "March", "April", "May", "June",
+//     "July", "August", "September", "October", "November", "December"
+//   ];
+document.getElementById("demo2").innerHTML=d;
+
+}
+    </script>
+  </body>
+  
+</html>
